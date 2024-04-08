@@ -27,8 +27,11 @@ if __name__ == '__main__':
 
     printDetails()
     print(bcolors.HEADER + "OUTPUT: " + bcolors.ENDC)
+    print("--------------------------------------------------------")
 
     calc_polinomial_guessian()
+    print("--------------------------------------------------------")
+
     xa = -1.0779
     xb = 0.71974
     calc_trapez()

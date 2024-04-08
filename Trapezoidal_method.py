@@ -36,14 +36,21 @@ def trapezoidal_rule(f, a, b, n):
 
 
 def calc_trapez():
-    xa = -1.0779
-    xb = 0.71974
-    g = lambda x: (3*x**2 + math.sin(x**4 + 5*x -6))/(2*math.e**(-2*x + 5))
-    n = 900
+    xa = -1
+    xb = 0.7
+    g = lambda x: (3 * x ** 2 + math.sin(x ** 4 + 5 * x - 6)) / (2 * math.e ** (-2 * x + 5))
+    n1 = 500
+    n2 = 501
 
 
-    result = trapezoidal_rule(g, xa, xb, n)
-    print(bcolors.OKBLUE, "Approximate integral:", result, bcolors.ENDC)
+    result1 = trapezoidal_rule(g, xa, xb, n1)
+    print(bcolors.OKBLUE, "n=",str(n1) )
+    print(bcolors.OKBLUE, "Approximate integral:", result1, bcolors.ENDC)
+
+    print("--------------------------------------------------------------")
+    result2 = trapezoidal_rule(g, xa, xb, n2)
+    print(bcolors.OKBLUE, "n=",str(n2) )
+    print(bcolors.OKBLUE, "Approximate integral:", result2, bcolors.ENDC)
 
 
 
